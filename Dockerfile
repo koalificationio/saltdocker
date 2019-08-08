@@ -17,3 +17,5 @@ VOLUME /etc/salt/pki/
 
 RUN pip3 install --no-cache-dir salt==2019.2.0 pycryptodomex CherryPy pygit2
 RUN su - salt -c 'salt-run salt.cmd tls.create_self_signed_cert'
+
+ADD gitfs.py /usr/local/lib/python3.7/site-packages/salt/utils/gitfs.py
